@@ -1,0 +1,30 @@
+const { By } = require('selenium-webdriver')
+const selectors = {
+    viewDocs: By.xpath("//a[text()=' View Docs']"),
+    guides: By.xpath("//div[@class='panel-sidebar-nav']//a[@href='/docs/guides/']"),
+    upgrading: By.xpath("//p[text()='Upgrading']"),
+    swagger: By.xpath("//a[text()='Swagger']"),
+    soapUi: By.xpath("//a[text()='SoapUI']"),
+    soapUiSearch: By.xpath("//a[contains(@class,'b-search-ic')]"),
+    searchInput: By.xpath("//input[@name='search']"),
+    clickNodeJS: By.xpath("//div[text()=' js']"),
+    swaggerJs: By.xpath("//span[text()='Swagger-JS']"),
+    signUp: By.xpath("//a[contains(text(),'Sign up')]"),
+    editor: By.xpath("//a[contains(text(),'Editor')]"),
+    cookies: By.xpath("//button[text()='Allow all cookies']"),
+    pageTitle: (expectedTitle) => By.xpath(`//title[contains(text(),'${expectedTitle}')]`),
+    amazonMenu: By.xpath("//a[@id='nav-hamburger-menu']"),
+    selectMobiles: By.xpath("//div[text()='Mobiles, Computers']"),
+    selectAllMobiles: By.xpath("//a[text()='All Mobile Phones']"),
+    fourStarsAndUp: By.xpath("//span[text()='4 Stars & Up']"),
+    budget10kTo20k: By.xpath("//span[text()='₹10,000 - ₹20,000']"),
+    userName: By.xpath("//input[@name='email']"),
+    continue: By.xpath("//input[@id='continue']"),
+    password: By.xpath("//input[@name='password']"),
+    selectOneplusNord: By.xpath("//span[text()='OnePlus Nord CE 3 Lite 5G (Chromatic Gray, 8GB RAM, 128GB Storage)']"),
+    priceToPay: By.xpath("//span[contains(@class,'priceToPay')]//span[@class='a-price-whole']"),
+    buyNow: By.xpath("//input[@title='Buy Now']"),
+    selectCashPayment: By.xpath("//input[contains(@value,'Cash')]"),
+    useThisPaymentMethod: By.xpath("//span[text()='Use this payment method']")
+}
+module.exports = { selectors }
