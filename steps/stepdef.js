@@ -109,6 +109,11 @@ Then('the user starts the soap ui flow and search {string}', async function (tex
 });
 
 Then('the user close the browser', async function () {
-  driver.close()
-  driver.quit()
+  await driver.close()
+  await driver.quit()
+});
+
+Then('the user takes the screenshot', async function () {
+  await stepfunctions.sleep(5000)
+  await stepfunctions.takeScreenshot()
 });

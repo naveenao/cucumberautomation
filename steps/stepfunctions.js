@@ -24,6 +24,22 @@ class StepFunctions{
         await enterText.sendKeys(`${text}`, Key.RETURN);
     }
 
+    async takeScreenshot() {
+        const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let result = ' ';
+        const charactersLength = characters.length;
+        for ( let i = 0; i < 5; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        
+        await driver.takeScreenshot().then(
+            function(image) {
+                require('fs').writeFileSync(`./screenshots/captured_image_${result}.png`, image, 'base64');
+                console.log("Screenshot has taken and saved under screenshots folder")
+            }
+        );
+    }
+
     async switchToNexttabByIndex(i) {
         const chandles = await driver.getWindowHandle()
         const ahandles = await driver.getAllWindowHandles()

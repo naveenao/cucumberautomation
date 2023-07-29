@@ -1,5 +1,6 @@
 Feature: Check
 
+@scenario1
  Scenario: To run aat on cucumber website
   When the user launch website "https://cucumber.io/"
   And the user does the cucumber flow
@@ -13,6 +14,7 @@ Feature: Check
   Then the user starts the soap ui flow and search "node"
   And the user close the browser
 
+@scenario2
  Scenario: To run aat on amazon
   When the user launch website "https://www.amazon.in/"
   And the user does the amazon flow

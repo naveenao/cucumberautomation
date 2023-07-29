@@ -21,7 +21,7 @@ const selectors = {
     userName: By.xpath("//input[@name='email']"),
     continue: By.xpath("//input[@id='continue']"),
     password: By.xpath("//input[@name='password']"),
-    selectOneplusNord: By.xpath("//span[text()='OnePlus Nord CE 3 Lite 5G (Chromatic Gray, 8GB RAM, 128GB Storage)']"),
+    selectOneplusNord: By.xpath("//span[text()='OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)']"),
     priceToPay: By.xpath("//span[contains(@class,'priceToPay')]//span[@class='a-price-whole']"),
     buyNow: By.xpath("//input[@title='Buy Now']"),
     selectCashPayment: By.xpath("//input[contains(@value,'Cash')]"),
