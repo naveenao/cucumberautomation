@@ -1,8 +1,11 @@
-const { By, until, Key } = require('selenium-webdriver')
-const webdriver = require('selenium-webdriver')
+var { By, until, Key } = require('selenium-webdriver')
+var webdriver = require('selenium-webdriver')
+var chrome    = require('selenium-webdriver/chrome')
+var options   = new chrome.Options();
 const { selectors } = require('./selectors.js');
 var driver = new webdriver.Builder()
         .forBrowser('chrome')
+        .setChromeOptions(options.addArguments("--headless=new","--window-size=1920,1080","--disable-logging","--disable-gpu","--disable-crash-reporter","--disable-extensions","--disable-in-process-stack-traces","--disable-dev-shm-usage","--log-level=3","--output=/dev/null"))
         .build();
 
 class StepFunctions{
