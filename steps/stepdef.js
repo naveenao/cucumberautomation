@@ -26,7 +26,7 @@ Then('the user does the cucumber flow', async function () {
 });
 
 Then('the user does the amazon flow', async function () {
-  // await stepfunctions.waitForTitle("BDD Testing & Collaboration Tools for Teams | Cucumber")
+  await stepfunctions.waitForTitle("BDD Testing & Collaboration Tools for Teams | Cucumber")
   await stepfunctions.waitForElement(selectors.amazonMenu)
   await driver.findElement(selectors.amazonMenu).click()
   await stepfunctions.waitForElement(selectors.selectMobiles)
