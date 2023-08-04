@@ -10,10 +10,12 @@
   "author": "naveen",
   "license": "ISC",
   "devDependencies": {
-    "@cucumber/cucumber": "^9.2.0"
+    "@cucumber/cucumber": "^9.2.0",
+    "@types/cucumber": "^7.0.0"
   },
   "dependencies": {
     "chromedriver": "^115.0.0",
+    "cucumber-html-reporter": "^7.1.1",
     "selenium-webdriver": "^4.11.1"
   }
 }
