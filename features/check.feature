@@ -1,3 +1,4 @@
+@checkfeature
 Feature: Check
 
 @scenario1

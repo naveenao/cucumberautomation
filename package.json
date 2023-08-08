@@ -6,7 +6,9 @@
   "type": "commonjs",
   "scripts": {
     "cucumber": "cucumber-js",
-    "test": "npm run cucumber -- features --tags"
+    "test": "npm run cucumber -- features --tags",
+    "debug": "node --inspect-brk=0.0.0.0 --loader ./node_modules/cucumber/bin/cucumber.js -p default",
+    "debug-feature": "npm run debug --features --tags"
   },
   "author": "naveen",
   "license": "ISC",
