@@ -18,7 +18,4 @@ Feature: Check
 @scenario2
  Scenario: To run aat on amazon
   When the user launch website "https://www.amazon.in/"
-  And the user does the amazon flow
-  And the user navigates to next tab by index 1
-  Then the user continues mobile buying flow
-  And the user close the browser
+  And the user clicks on "todaysDeals"

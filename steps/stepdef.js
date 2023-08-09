@@ -1,5 +1,6 @@
 const { When, Then, setDefaultTimeout } = require('@cucumber/cucumber')
 const { StepFunctions, driver } = require('./stepfunctions.js')
+const { get } = require('lodash')
 const { selectors } = require('./selectors.js')
 setDefaultTimeout(100 * 1000);
 const { Key } = require('selenium-webdriver')
@@ -90,7 +91,7 @@ Then('the user navigates to previous tab', async function () {
 Then('the user clicks editor', async function () {
   await stepfunctions.waitForElement(selectors.editor)
   await driver.findElement(selectors.editor).click()
-  driver.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+  await driver.executeScript("window.scrollBy(0,document.body.scrollHeight)");
   await stepfunctions.waitForElement(selectors.soapUi)
   await driver.findElement(selectors.soapUi).click()
 });
@@ -115,4 +116,12 @@ Then('the user close the browser', async function () {
 Then('the user takes the screenshot', async function () {
   await stepfunctions.sleep(5000)
   await stepfunctions.takeScreenshot()
+});
+
+Then('the user clicks on {string}', async function (text) {
+  const selector = await get(selectors, text)
+  console.log("selector is",selector)
+  await stepfunctions.waitForElement(selector)
+  await driver.findElement(selector).click()
+  await driver.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 });

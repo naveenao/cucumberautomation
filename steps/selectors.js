@@ -14,6 +14,7 @@ const selectors = {
     cookies: By.xpath("//button[text()='Allow all cookies']"),
     pageTitle: (expectedTitle) => By.xpath(`//title[contains(text(),'${expectedTitle}')]`),
     amazonMenu: By.xpath("//a[@id='nav-hamburger-menu']"),
+    todaysDeals: By.xpath(`//a[text()="Today's Deals"]`),
     selectMobiles: By.xpath("//div[text()='Mobiles, Computers']"),
     selectAllMobiles: By.xpath("//a[text()='All Mobile Phones']"),
     fourStarsAndUp: By.xpath("//span[text()='4 Stars & Up']"),
