@@ -13,9 +13,9 @@ Feature: Check
   Then the user clicks editor
   And the user navigates to next tab by index 2
   Then the user starts the soap ui flow and search "node"
-  And the user close the browser
 
 @scenario2
  Scenario: To run aat on amazon
   When the user launch website "https://www.amazon.in/"
   And the user clicks on "todaysDeals"
+  And the user close the browser

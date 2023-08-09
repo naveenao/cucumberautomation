@@ -120,7 +120,6 @@ Then('the user takes the screenshot', async function () {
 
 Then('the user clicks on {string}', async function (text) {
   const selector = await get(selectors, text)
-  console.log("selector is",selector)
   await stepfunctions.waitForElement(selector)
   await driver.findElement(selector).click()
   await driver.executeScript("window.scrollBy(0,document.body.scrollHeight)");
