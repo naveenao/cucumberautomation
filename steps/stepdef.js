@@ -90,6 +90,11 @@ Then('the user navigates to previous tab', async function () {
 
 Then('the user clicks editor', async function () {
   await stepfunctions.waitForElement(selectors.editor)
+  const scrollintoview = `var selector = "//a[contains(text(),'Editor')]";
+                          var editorButton = document.evaluate(selector, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+                          editorButton.scrollIntoView();`
+  await driver.executeScript(scrollintoview)
+  await stepfunctions.sleep(1000)
   await driver.findElement(selectors.editor).click()
   await driver.executeScript("window.scrollBy(0,document.body.scrollHeight)");
   await stepfunctions.waitForElement(selectors.soapUi)
