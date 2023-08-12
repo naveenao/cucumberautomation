@@ -96,8 +96,13 @@ Then('the user clicks editor', async function () {
   await driver.executeScript(scrollintoview)
   await stepfunctions.sleep(1000)
   await driver.findElement(selectors.editor).click()
-  await driver.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+  //await driver.executeScript("window.scrollBy(0,document.body.scrollHeight)");
   await stepfunctions.waitForElement(selectors.soapUi)
+  const scrollintosoapuiview = `var selector = "//a[text()='SoapUI']";
+                          var editorButton = document.evaluate(selector, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+                          editorButton.scrollIntoView();`
+  await driver.executeScript(scrollintosoapuiview)
+  await stepfunctions.sleep(1000)
   await driver.findElement(selectors.soapUi).click()
 });
 
