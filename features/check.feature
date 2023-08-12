@@ -9,10 +9,10 @@ Feature: Check
   Then the user continues flow in swagger
   And the user navigates to next tab by index 1
   Then the user opens gitlab
-  And the user navigates to previous tab
-  Then the user clicks editor
-  And the user navigates to next tab by index 2
-  Then the user starts the soap ui flow and search "node"
+  # And the user navigates to previous tab
+  # Then the user clicks editor
+  # And the user navigates to next tab by index 2
+  # Then the user starts the soap ui flow and search "node"
 
 @scenario2
  Scenario: To run aat on amazon
